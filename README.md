@@ -4,7 +4,7 @@ NPM: 2206825776<br>
 Kelas: Pemrograman Lanjut - A<br>
 
 ---
-## REFLEKSI 1
+## REFLEKSI 
 
 ###### 1. How many data your publisher program will send to the message broker in one run?
 * Program publisher akan mengirimkan lima set informasi ke dalam sistem pengirim pesan pada satu waktu.
@@ -18,13 +18,17 @@ Kelas: Pemrograman Lanjut - A<br>
 ![Photo 1](images/photo1.png)
 
 ###### 4.  Sending and processing event
-* Screenshot berhasilnya menerima 5 event message broker dari publisher pada terminal subscriber.<br>
+* Screenshot berhasilnya menerima 5 event message broker dari publisher pada terminal subscriber.
 ![Photo 3](images/photo3.png)
 
-* Screenshot berhasilnya menjalankan `cargo run` untuk mengirim 5 event memalui message brocker yang akan diproses oleh subscriber pada terminal publisher.<br>
+* Screenshot berhasilnya menjalankan `cargo run` untuk mengirim 5 event memalui message brocker yang akan diproses oleh subscriber pada terminal publisher.
 ![Photo 2](images/photo2.png)
 
-
 ###### 5. Monitoring chart based on publisher
-* Screenshot grafik antarmuka RabbitMQ yang menunjukkan adanya spike pada message rates karena menjalankan `cargo run` atau publisher berkali-kali. 
+Screenshot grafik antarmuka RabbitMQ yang menunjukkan adanya spike pada message rates karena menjalankan `cargo run` atau publisher berkali-kali. 
 ![Photo 4](images/photo4.png)
+
+###### 6. Code repair
+* Memperhatikan hasil dari `publish_event`: saat ini, hasil dari fungsi `publish_event` diabaikan dengan menggunakan _=. Disarankan untuk menangani hasil ini dengan lebih tepat untuk memastikan tidak ada potensi kesalahan yang terlewat.
+* Refaktor pemanggilan fungsi: `publish_event` dipanggil beberapa kali dengan argumen yang serupa. Sebaiknya kode ini direfactor menjadi loop atau fungsi terpisah untuk mengurangi duplikasi dan meningkatkan kejelasan.
+* Pengkodean langsung: koneksi string dan nama event dikodekan secara langsung di dalam kode. Lebih baik untuk memisahkan ini ke dalam file konfigurasi terpisah atau menggunakan environment variables untuk meningkatkan fleksibilitas dan keamanan.
