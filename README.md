@@ -16,3 +16,10 @@ Kelas: Pemrograman Lanjut - A<br>
 
 ###### 3.  Running RabbitMQ as message broker
 ![Photo 1](images/photo1.png)
+
+###### 4.  Sending and processing event
+* Screenshot Berhasilnya menerima 5 event message broker dari publisher pada terminal subscriber.<br>
+![Photo 3](images/photo3.png)
+
+* Screenshot Berhasilnya menjalankan `cargo run` untuk mengirim 5 event memalui message brocker yang akan diproses oleh subscriber.<br>
+![Photo 2](images/photo2.png)
