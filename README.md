@@ -18,8 +18,13 @@ Kelas: Pemrograman Lanjut - A<br>
 ![Photo 1](images/photo1.png)
 
 ###### 4.  Sending and processing event
-* Screenshot Berhasilnya menerima 5 event message broker dari publisher pada terminal subscriber.<br>
+* Screenshot berhasilnya menerima 5 event message broker dari publisher pada terminal subscriber.<br>
 ![Photo 3](images/photo3.png)
 
-* Screenshot Berhasilnya menjalankan `cargo run` untuk mengirim 5 event memalui message brocker yang akan diproses oleh subscriber.<br>
+* Screenshot berhasilnya menjalankan `cargo run` untuk mengirim 5 event memalui message brocker yang akan diproses oleh subscriber pada terminal publisher.<br>
 ![Photo 2](images/photo2.png)
+
+
+###### 5. Monitoring chart based on publisher
+* Screenshot grafik antarmuka RabbitMQ yang menunjukkan adanya spike pada message rates karena menjalankan `cargo run` atau publisher berkali-kali. 
+![Photo 4](images/photo4.png)
